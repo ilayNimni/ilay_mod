@@ -26,7 +26,8 @@
                 }
               ],
               "name": "tutorialmod:deepslate_zircon_ore"
-            }{
+            },
+            {
               "type": "minecraft:item",
               "functions": [
                 {
