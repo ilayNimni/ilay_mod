@@ -4,6 +4,7 @@ import net.ilayNimni.tutorialmod.TutorialMod;
 import net.ilayNimni.tutorialmod.block.custom.BlueberryCropBlock;
 import net.ilayNimni.tutorialmod.item.ModCreativeModeTab;
 import net.ilayNimni.tutorialmod.item.ModItems;
+import net.ilayNimni.tutorialmod.item.custom.JumpyBlock;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -44,6 +45,10 @@ public class ModBlocks {
         registerBlockItem(name, toReturn, tab);
         return toReturn;
     }
+
+    public static final RegistryObject<Block> JUMPY_BLOCK = registerBlock("jumpy_block",
+            () -> new JumpyBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.TUTORIAL_TAB);
 
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block,
                                                                             CreativeModeTab tab) {

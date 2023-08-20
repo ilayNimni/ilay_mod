@@ -2,6 +2,7 @@ package net.ilayNimni.tutorialmod.item;
 
 import net.ilayNimni.tutorialmod.TutorialMod;
 import net.ilayNimni.tutorialmod.block.ModBlocks;
+import net.ilayNimni.tutorialmod.item.custom.EightBallItem;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -41,6 +42,9 @@ public class ModItems {
 
     public static final RegistryObject<HoeItem> ZIRCON_HOE = ITEMS.register("zircon_hoe",
             () -> new HoeItem(null, 0, 0, new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+
+    public static final RegistryObject<Item> EIGHT_BALL = ITEMS.register("eight_ball",
+            () -> new EightBallItem(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
 
     public static class Tiers {
         public static final Tier ZIRCON = new ForgeTier(
